@@ -349,10 +349,22 @@
                     android:layout_width="match_parent"
                     android:background="#E7E7E7"
                     android:layout_marginEnd="@dimen/dimen_10dp"
-                    android:layout_marginBottom="100dp"
                     android:layout_marginTop="@dimen/dimen_5dp"
                     android:layout_height="@dimen/dimen_1dp"/>
 
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button"
+                    app:backgroundTint="@color/colorPrimary"
+                    android:text="Submit"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:padding="@dimen/dimen_12dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginBottom="@dimen/dimen_15dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
             </LinearLayout>
 

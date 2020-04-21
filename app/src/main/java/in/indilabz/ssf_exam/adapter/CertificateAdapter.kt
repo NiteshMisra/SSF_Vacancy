@@ -8,6 +8,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
@@ -54,7 +55,7 @@ class CertificateAdapter(var context: Context,var list : ArrayList<ItemHome>, va
     class CertHolder(view : View) : RecyclerView.ViewHolder(view){
 
         val name : TextView = view.findViewById(R.id.examName)
-        val apply : MaterialButton = view.findViewById(R.id.applyNow)
+        val apply : Button = view.findViewById(R.id.applyNow)
 
     }
 
