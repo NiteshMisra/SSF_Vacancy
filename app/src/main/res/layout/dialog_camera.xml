@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <ImageView
+           android:layout_width="150dp"
+           android:layout_height="150dp"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="100dp"
+           android:src="@drawable/ic_camera"/>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="50dp"
+           android:text="We are observing your screen. So, don't try to switch between application. Because, it might be considered as cheating and your exam will be terminated at very instant."
+           android:gravity="center"
+           android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+           android:textStyle="bold"/>
+
+   </LinearLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

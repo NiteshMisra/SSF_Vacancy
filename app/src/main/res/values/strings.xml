@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">HackPlanet Certificate</string>
+    <string name="navigation_drawer_open">Drawer open</string>
+    <string name="navigation_drawer_close">Drawer close</string>
+    <string name="action_settings">Settings</string>
+    <string name="prev">Previous</string>
+    <string name="next">Next</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="action_profile">Profile</string>
+
+    <string-array name="instructions">
+        <item>There is only one correct answer to each question. Click on the most appropriate option to mark it as your answer.</item>
+        <item>According to your selection of questions it will change the colour in the boxes at the right side window, these colours will help you to identify the required group of questions.</item>
+        <item>You can unmark your answer by clicking on the "CLEAR RESPONSE" Option.</item>
+        <item>You can mark a question for reviewing it later by clicking on the “marked &amp; review” button.</item>
+        <item>A Number list of all questions appears at the right hand side of the window. You can access the questions in any order within a section or across sections by clicking on the question number given on the number list.</item>
+        <item>You can use rough sheets while taking the test. Do not use calculators, log tables, dictionaries, or any other printed/online reference material during the test.</item>
+        <item>Do not click the button “SUBMIT TEST” before completing the test. A test once submitted cannot be resumed.</item>
+        <item>Once clicked on the (SUBMIT TEST) button, You Cannot REDO this Test.....</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:cardBackgroundColor="@color/colorPrimaryDark"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/logo" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
+                    android:text="HackPlanet Certificate"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/roboto_black"
+                android:text="Registration Form"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/highSchool"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:background="@drawable/curi_background"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="High School"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/highSchoolArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_arrow_drop_down"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/highSchoolLayout"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:text="University Name"
+                        android:textColor="#8A8A8B" />
+
+                    <EditText
+                        android:id="@+id/hsNOU"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="name of university"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Date of passing"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:textColor="#8A8A8B" />
+
+                    <android.helper.DateTimePickerEditText
+                        android:id="@+id/hsDOP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:layout_marginEnd="@dimen/dimen_5dp"
+                        android:padding="12dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_14sp"
+                        android:hint="Date of passing"
+                        android:format="yyyy-MM-dd"
+                        app:datePickerType="spinner"
+                        app:inputType="date"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:text="Attempts"
+                        android:textColor="#8A8A8B" />
+
+                    <EditText
+                        android:id="@+id/hsA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="enter attempts"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Roll number"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:textColor="#8A8A8B" />
+
+                    <EditText
+                        android:id="@+id/hsRN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="enter roll number"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Total Marks"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:textColor="#8A8A8B"/>
+
+                    <EditText
+                        android:id="@+id/hsTM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="enter total marks"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Obtained Marks"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:textColor="#8A8A8B" />
+
+                    <EditText
+                        android:id="@+id/hsOM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="enter obtained marks"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/interMediate"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:background="@drawable/curi_background"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Intermediate"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/interMediateArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_arrow_drop_down"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/intermediateLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="University Name"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:textColor="#8A8A8B" />
+
+                    <EditText
+                        android:id="@+id/iNOU"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="name of university"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Date of passing"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:textColor="#8A8A8B" />
+
+                    <android.helper.DateTimePickerEditText
+                        android:id="@+id/iDOP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:layout_marginEnd="@dimen/dimen_5dp"
+                        android:padding="12dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_14sp"
+                        android:hint="Date of passing"
+                        android:format="yyyy-MM-dd"
+                        app:datePickerType="spinner"
+                        app:inputType="date"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Attempts"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:textColor="#8A8A8B" />
+
+                    <EditText
+                        android:id="@+id/iA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="enter attempts"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Roll number"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:textColor="#8A8A8B" />
+
+                    <EditText
+                        android:id="@+id/iRN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="enter roll number"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Total Marks"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:textColor="#8A8A8B"/>
+
+                    <EditText
+                        android:id="@+id/iTM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="enter total marks"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:text="Obtained Marks"
+                        android:textColor="#8A8A8B" />
+
+                    <EditText
+                        android:id="@+id/iOM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="enter obtained marks"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/graduation"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:background="@drawable/curi_background"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Graduation"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/graduationArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_arrow_drop_down"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+               <LinearLayout
+                   android:id="@+id/graduationLayout"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:visibility="gone"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="15dp"
+                       android:layout_marginStart="@dimen/dimen_5dp"
+                       android:fontFamily="@font/roboto_bold"
+                       android:textSize="@dimen/dimen_12sp"
+                       android:text="University Name"
+                       android:textColor="#8A8A8B" />
+
+                   <EditText
+                       android:id="@+id/graNOU"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="5dp"
+                       android:layout_marginTop="5dp"
+                       android:layout_marginEnd="5dp"
+                       android:background="@drawable/register_form_edt_backgro"
+                       android:hint="name of university"
+                       android:imeOptions="actionNext"
+                       android:inputType="text"
+                       android:maxLines="1"
+                       android:padding="12dp"
+                       android:singleLine="true"
+                       android:textColor="#000000"
+                       android:textSize="14sp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginStart="@dimen/dimen_5dp"
+                       android:fontFamily="@font/roboto_bold"
+                       android:text="Date of passing"
+                       android:textSize="@dimen/dimen_12sp"
+                       android:textColor="#8A8A8B" />
+
+                   <android.helper.DateTimePickerEditText
+                       android:id="@+id/graDOP"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@drawable/register_form_edt_backgro"
+                       android:layout_marginTop="@dimen/dimen_5dp"
+                       android:layout_marginStart="@dimen/dimen_5dp"
+                       android:layout_marginEnd="@dimen/dimen_5dp"
+                       android:padding="12dp"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/dimen_14sp"
+                       android:hint="Date of passing"
+                       android:format="yyyy-MM-dd"
+                       app:datePickerType="spinner"
+                       app:inputType="date"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginStart="@dimen/dimen_5dp"
+                       android:fontFamily="@font/roboto_bold"
+                       android:text="Attempts"
+                       android:textSize="@dimen/dimen_12sp"
+                       android:textColor="#8A8A8B" />
+
+                   <EditText
+                       android:id="@+id/graA"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="5dp"
+                       android:layout_marginTop="5dp"
+                       android:layout_marginEnd="5dp"
+                       android:background="@drawable/register_form_edt_backgro"
+                       android:hint="enter attempts"
+                       android:imeOptions="actionNext"
+                       android:inputType="text"
+                       android:maxLines="1"
+                       android:padding="12dp"
+                       android:singleLine="true"
+                       android:textColor="#000000"
+                       android:textSize="14sp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginStart="@dimen/dimen_5dp"
+                       android:fontFamily="@font/roboto_bold"
+                       android:text="Roll number"
+                       android:textSize="@dimen/dimen_12sp"
+                       android:textColor="#8A8A8B" />
+
+                   <EditText
+                       android:id="@+id/graRN"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="5dp"
+                       android:layout_marginTop="5dp"
+                       android:layout_marginEnd="5dp"
+                       android:background="@drawable/register_form_edt_backgro"
+                       android:hint="enter roll number"
+                       android:imeOptions="actionNext"
+                       android:inputType="text"
+                       android:maxLines="1"
+                       android:padding="12dp"
+                       android:singleLine="true"
+                       android:textColor="#000000"
+                       android:textSize="14sp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginStart="@dimen/dimen_5dp"
+                       android:fontFamily="@font/roboto_bold"
+                       android:text="Total Marks"
+                       android:textSize="@dimen/dimen_12sp"
+                       android:textColor="#8A8A8B"/>
+
+                   <EditText
+                       android:id="@+id/graTM"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="5dp"
+                       android:layout_marginTop="5dp"
+                       android:layout_marginEnd="5dp"
+                       android:background="@drawable/register_form_edt_backgro"
+                       android:hint="enter total marks"
+                       android:imeOptions="actionNext"
+                       android:inputType="text"
+                       android:maxLines="1"
+                       android:padding="12dp"
+                       android:singleLine="true"
+                       android:textColor="#000000"
+                       android:textSize="14sp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginStart="@dimen/dimen_5dp"
+                       android:fontFamily="@font/roboto_bold"
+                       android:text="Obtained Marks"
+                       android:textSize="@dimen/dimen_12sp"
+                       android:textColor="#8A8A8B" />
+
+                   <EditText
+                       android:id="@+id/graOM"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="5dp"
+                       android:layout_marginTop="5dp"
+                       android:layout_marginEnd="5dp"
+                       android:background="@drawable/register_form_edt_backgro"
+                       android:hint="enter obtained marks"
+                       android:imeOptions="actionNext"
+                       android:inputType="text"
+                       android:maxLines="1"
+                       android:padding="12dp"
+                       android:singleLine="true"
+                       android:textColor="#000000"
+                       android:textSize="14sp" />
+
+               </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/diploma"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:background="@drawable/curi_background"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Diploma"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/diplomaArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_arrow_drop_down"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/diplomaLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="University Name"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:textColor="#8A8A8B" />
+
+                    <EditText
+                        android:id="@+id/dipNOU"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="name of university"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Date of passing"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:textColor="#8A8A8B" />
+
+                    <android.helper.DateTimePickerEditText
+                        android:id="@+id/dipDOP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:layout_marginEnd="@dimen/dimen_5dp"
+                        android:padding="12dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_14sp"
+                        android:hint="Date of passing"
+                        android:format="yyyy-MM-dd"
+                        app:datePickerType="spinner"
+                        app:inputType="date"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Attempts"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:textColor="#8A8A8B" />
+
+                    <EditText
+                        android:id="@+id/dipA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="enter attempts"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Roll number"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:textColor="#8A8A8B" />
+
+                    <EditText
+                        android:id="@+id/dipRN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="enter roll number"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Total Marks"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:textColor="#8A8A8B"/>
+
+                    <EditText
+                        android:id="@+id/dipTM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="enter total marks"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Obtained Marks"
+                        android:textSize="12sp"
+                        android:textColor="#8A8A8B" />
+
+                    <EditText
+                        android:id="@+id/dipOM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/register_form_edt_backgro"
+                        android:hint="enter obtained marks"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="Continue"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:cornerRadius="20dp" />
+            
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

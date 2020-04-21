@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F57B00</color>
+    <color name="colorPrimaryDark">#F57B00</color>
+    <color name="colorPrimaryDark2">#F57B00</color>
+    <color name="colorAccent">#F57B00</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+
+    <color name="correct">#689f38</color>
+    <color name="incorrect">#e90a0e</color>
+    <color name="review">#1c6acf</color>
+    <color name="md_grey_300">#e0e0e0</color>
+    <color name="loginColorAccent">#A6A9AF</color>
+</resources>

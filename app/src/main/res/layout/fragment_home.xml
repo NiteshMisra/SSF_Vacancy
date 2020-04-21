@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="#F0F0F0"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical"
+                        android:weightSum="5"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="2.5"
+                            android:layout_height="150dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/logo"
+                            android:background="#FFFFFF" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dimen_0dp"
+                            android:layout_weight="2.5"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="#FFFFFF"
+                            android:layout_gravity="center"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="start"
+                                android:maxLines="2"
+                                android:text="HackPlanet Certificates"
+                                android:textColor="#131b37"
+                                android:textSize="21sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="start"
+                                android:text="All IT Certificate for you"
+                                android:textColor="#515155"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="75dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="start"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="Discover"
+                                android:layout_marginTop="10dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                android:textColor="@color/colorPrimaryDark2"
+                                android:background="@drawable/view_all_background"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view3"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="#F0F0F0"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="25dp">
+
+                                    <TextView
+                                        android:id="@+id/all"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_black"
+                                        android:text="155"
+                                        android:textColor="#131b37"
+                                        android:textSize="20sp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:alpha="0.6"
+                                        android:includeFontPadding="false"
+                                        android:fontFamily="@font/poppins"
+                                        android:gravity="center"
+                                        android:text="All Certificates"
+                                        android:textColor="#131b37"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <Button
+                                android:layout_width="75dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="View all"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                android:textColor="#FFFFFF"
+                                android:background="@drawable/view_all_background2"
+                                android:textSize="10sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="25dp">
+
+                                    <TextView
+                                        android:id="@+id/attempted"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_black"
+                                        android:text="155"
+                                        android:textColor="#131b37"
+                                        android:textSize="20sp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:alpha="0.6"
+                                        android:includeFontPadding="false"
+                                        android:fontFamily="@font/poppins"
+                                        android:gravity="center"
+                                        android:text="Attempted"
+                                        android:textColor="#131b37"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <Button
+                                android:layout_width="75dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="View all"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                android:textColor="#FFFFFF"
+                                android:background="@drawable/view_all_background2"
+                                android:textSize="10sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="25dp">
+
+                                    <TextView
+                                        android:id="@+id/registered"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_black"
+                                        android:text="155"
+                                        android:textColor="#131b37"
+                                        android:textSize="20sp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:alpha="0.6"
+                                        android:includeFontPadding="false"
+                                        android:fontFamily="@font/poppins"
+                                        android:gravity="center"
+                                        android:text="Registered"
+                                        android:textColor="#131b37"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <Button
+                                android:layout_width="75dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="View all"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                android:textColor="#FFFFFF"
+                                android:background="@drawable/view_all_background2"
+                                android:textSize="10sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/overview"
+                    android:background="#F0F0F0"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="Certificates"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/header"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/title"
+                        android:overScrollMode="never"
+                        android:layout_marginEnd="@dimen/dimen_10dp"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/header"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="Registration for Certificates"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/register"
+                        android:overScrollMode="never"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:layout_marginEnd="@dimen/dimen_5dp"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="2"
+                        tools:itemCount="6"
+                        tools:listitem="@layout/item_shop" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>

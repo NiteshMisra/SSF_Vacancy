@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:background="@color/colorPrimaryDark"
+            android:layout_alignParentTop="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="Registration form"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appBar"
+            android:layout_above="@+id/submit"
+            android:layout_marginBottom="@dimen/fab_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/fab_margin">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_phone"
+                    android:padding="8dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:hint="Title"/>
+
+                <EditText
+                    android:id="@+id/applicantName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_phone"
+                    android:padding="8dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:hint="Applicant name"/>
+
+                <EditText
+                    android:id="@+id/fatherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_phone"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:padding="8dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:hint="Father's name"/>
+
+                <EditText
+                    android:id="@+id/motherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_phone"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:padding="8dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:hint="Mother's name"/>
+
+                <android.helper.DateTimePickerEditText
+                    android:id="@+id/dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_phone"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:padding="10dp"
+                    android:text="DOB"
+                    android:format="yyyy-MM-dd"
+                    app:datePickerType="spinner"
+                    app:inputType="date"/>
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_phone"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:text="Gender"/>
+
+                <TextView
+                    android:id="@+id/mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_phone"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:text="Mobile"/>
+
+                <EditText
+                    android:id="@+id/mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_phone"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:padding="8dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:hint="E-mail"/>
+
+                <TextView
+                    android:id="@+id/martialStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_phone"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:text="Martial status"/>
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_phone"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:padding="8dp"
+                    android:imeOptions="actionNext"
+                    android:scrollbars="vertical"
+                    android:maxLines="5"
+                    android:hint="Address"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:background="@drawable/rect_grey">
+
+                    <ImageView
+                        android:id="@+id/profilePreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:background="#E0E0E0" />
+
+                    <TextView
+                        android:id="@+id/clickProfileAction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Click to add profile image"
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/fab_margin"
+                        android:background="@color/black"
+                        android:textColor="@color/white"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:background="@drawable/rect_grey">
+
+                    <ImageView
+                        android:id="@+id/signaturePreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:background="#E0E0E0" />
+
+                    <TextView
+                        android:id="@+id/clickSignatureAction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Click to add signature image"
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/fab_margin"
+                        android:background="@color/black"
+                        android:textColor="@color/white"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#FF5722"
+            android:textColor="@color/white"
+            android:text="submit"/>
+
+    </RelativeLayout>
+</layout>
