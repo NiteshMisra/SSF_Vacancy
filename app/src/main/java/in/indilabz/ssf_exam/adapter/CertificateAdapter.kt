@@ -9,9 +9,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.google.android.material.button.MaterialButton
+import com.google.gson.Gson
 
 class CertificateAdapter(var context: Context,var list : ArrayList<ItemHome>, var isViewAll : Boolean) : RecyclerView.Adapter<CertificateAdapter.CertHolder>() {
 
@@ -42,11 +45,16 @@ class CertificateAdapter(var context: Context,var list : ArrayList<ItemHome>, va
             holder.apply.text = ("Apply")
         }
 
+
+        holder.image.scaleType = ImageView.ScaleType.FIT_XY
+        Glide.with(context).load(uploadCurrent.image).into(holder.image)
+
         holder.apply.setOnClickListener {
             val intent = Intent(Intent(context, Detail::class.java))
             intent.putExtra("type", position.toString())
             intent.putExtra("id", uploadCurrent.id)
-            intent.putExtra("name", uploadCurrent.name)
+            intent.putExtra("price","1250")
+            intent.putExtra("GSON", Gson().toJson(uploadCurrent))
             context.startActivity(intent)
         }
     }
@@ -56,6 +64,7 @@ class CertificateAdapter(var context: Context,var list : ArrayList<ItemHome>, va
 
         val name : TextView = view.findViewById(R.id.examName)
         val apply : Button = view.findViewById(R.id.applyNow)
+        val image : ImageView = view.findViewById(R.id.image)
 
     }
 

@@ -44,6 +44,7 @@ class INDIMaster : Application(){
         }
 
         private val api = RetrofitInstance.instance().create(API::class.java)
+        private val homeApi = RetrofitInstance.homeInstance().create(API::class.java)
 
         private val session = RetrofitInstance.session().create(API::class.java)
 
@@ -80,6 +81,10 @@ class INDIMaster : Application(){
 
         fun api(): API {
             return api
+        }
+
+        fun homeApi(): API {
+            return homeApi
         }
 
         fun session(): API {

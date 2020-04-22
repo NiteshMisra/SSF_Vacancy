@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var toolbar: Toolbar
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -180,7 +179,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
+        if (item.itemId == R.id.nav_notify){
+            startActivity(Intent(this,Notification::class.java))
+        }
         return super.onOptionsItemSelected(item)
     }
 }

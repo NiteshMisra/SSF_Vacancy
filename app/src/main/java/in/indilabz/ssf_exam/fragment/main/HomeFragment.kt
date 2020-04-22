@@ -31,7 +31,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 
-
 class HomeFragment : Fragment(){
 
     private lateinit var binding: FragmentHomeBinding
@@ -53,7 +52,6 @@ class HomeFragment : Fragment(){
 
         return parentView
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -81,7 +79,7 @@ class HomeFragment : Fragment(){
         Log.e("home",INDIPreferences.user()!!.id.toString())
 
         RetrofitInstance.getRetrofit(
-            INDIMaster.api().home(
+            INDIMaster.homeApi().home(
                 INDIPreferences.user()!!.id
             )
             , result)
@@ -95,80 +93,8 @@ class HomeFragment : Fragment(){
 
         datum.add(
             ItemHome(
-                3,
-                "Basic Computer Course (BCC)",
-                R.drawable.logo,
-                titles.contains("3")
-            )
-        )
-
-        datum.add(
-            ItemHome(
-                4,
-                "Cerficate In Visual Basic",
-                R.drawable.logo,
-                titles.contains("4")
-            )
-        )
-
-        datum.add(
-            ItemHome(
-                5,
-                "Certificate Training in HTML",
-                R.drawable.logo,
-                titles.contains("5")
-            )
-        )
-
-        datum.add(
-            ItemHome(
-                6,
-                "Certificate in English Typing",
-                R.drawable.logo,
-                titles.contains("6")
-            )
-        )
-
-        datum.add(
-            ItemHome(
-                7,
-                "Certificate in Hindi Typing",
-                R.drawable.logo,
-                titles.contains("7")
-            )
-        )
-
-        datum.add(
-            ItemHome(
-                8,
-                "Certificate Course in Java",
-                R.drawable.logo,
-                titles.contains("8")
-            )
-        )
-
-        datum.add(
-            ItemHome(
-                9,
-                "Certificate Course in Computer Application",
-                R.drawable.logo,
-                titles.contains("9")
-            )
-        )
-
-        datum.add(
-            ItemHome(
-                10,
-                "Certificate Course in Software Engineering",
-                R.drawable.logo,
-                titles.contains("10")
-            )
-        )
-
-        datum.add(
-            ItemHome(
                 11,
-                "Certificate Course in Web Development",
+                "Marketing Strategy",
                 R.drawable.logo,
                 titles.contains("11")
             )
@@ -177,7 +103,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 12,
-                "Certificate Course in Information Technology",
+                "Website Traffic",
                 R.drawable.logo,
                 titles.contains("12")
             )
@@ -186,7 +112,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 13,
-                "Certificate in Hardware",
+                "Local SEO",
                 R.drawable.logo,
                 titles.contains("13")
             )
@@ -195,7 +121,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 14,
-                "Certificate in Ethical Hacking",
+                "Facebook Marketing",
                 R.drawable.logo,
                 titles.contains("14")
             )
@@ -204,7 +130,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 15,
-                "Certificate in Hardware &amp; Networking",
+                "Instagram Marketing",
                 R.drawable.logo,
                 titles.contains("15")
             )
@@ -213,7 +139,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 16,
-                "Certificate in Computer Teacher Training",
+                "YouTube Marketing",
                 R.drawable.logo,
                 titles.contains("16")
             )
@@ -222,7 +148,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 17,
-                "Advance Diploma in Computer Science",
+                "Lead Generation",
                 R.drawable.logo,
                 titles.contains("17")
             )
@@ -231,7 +157,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 18,
-                "Advance Diploma in Computer Application",
+                "Landing Page Optimization",
                 R.drawable.logo,
                 titles.contains("18")
             )
@@ -240,7 +166,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 19,
-                "Advance Diploma in Computer Language",
+                "Development",
                 R.drawable.logo,
                 titles.contains("19")
             )
@@ -249,7 +175,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 20,
-                "Advance Diploma in Computer Hardware & Networking",
+                "Python",
                 R.drawable.logo,
                 titles.contains("20")
             )
@@ -258,7 +184,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 21,
-                "Diploma In Computer Aided Designing",
+                "Data Science",
                 R.drawable.logo,
                 titles.contains("21")
             )
@@ -267,7 +193,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 22,
-                "Advance Diploma in Web Designing",
+                "JavaScript",
                 R.drawable.logo,
                 titles.contains("22")
             )
@@ -276,7 +202,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 23,
-                "Advance Diploma in 2-d Animation",
+                "Machine Learning",
                 R.drawable.logo,
                 titles.contains("23")
             )
@@ -285,7 +211,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 24,
-                "Advance Diploma in 3-d Animation",
+                "Java",
                 R.drawable.logo,
                 titles.contains("24")
             )
@@ -294,17 +220,576 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 25,
-                "Advance Diploma in Computer Teacher Training",
+                "PHP",
                 R.drawable.logo,
                 titles.contains("25")
             )
         )
 
+        datum.add(
+            ItemHome(
+                26,
+                "C#",
+                R.drawable.logo,
+                titles.contains("26")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                27,
+                "Data Analysis",
+                R.drawable.logo,
+                titles.contains("27")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                28,
+                "Node.Js",
+                R.drawable.logo,
+                titles.contains("28")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                29,
+                "CSS",
+                R.drawable.logo,
+                titles.contains("29")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                30,
+                "iOS Development",
+                R.drawable.logo,
+                titles.contains("30")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                31,
+                "Deep Learning",
+                R.drawable.logo,
+                titles.contains("31")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                32,
+                "C++",
+                R.drawable.logo,
+                titles.contains("32")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                33,
+                "Google Flutter",
+                R.drawable.logo,
+                titles.contains("33")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                34,
+                "Swift",
+                R.drawable.logo,
+                titles.contains("34")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                35,
+                "React",
+                R.drawable.logo,
+                titles.contains("35")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                36,
+                "Native",
+                R.drawable.logo,
+                titles.contains("36")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                37,
+                "Kotlin",
+                R.drawable.logo,
+                titles.contains("37")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                38,
+                "Ionic",
+                R.drawable.logo,
+                titles.contains("38")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                39,
+                "Redux",
+                R.drawable.logo,
+                titles.contains("39")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                40,
+                "Framework",
+                R.drawable.logo,
+                titles.contains("40")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                41,
+                "Xamarin",
+                R.drawable.logo,
+                titles.contains("41")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                42,
+                "Spring",
+                R.drawable.logo,
+                titles.contains("42")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                43,
+                "Hibernate",
+                R.drawable.logo,
+                titles.contains("43")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                44,
+                "Selenium",
+                R.drawable.logo,
+                titles.contains("44")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                45,
+                "Web Driver Software",
+                R.drawable.logo,
+                titles.contains("45")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                46,
+                "Testing Java",
+                R.drawable.logo,
+                titles.contains("46")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                47,
+                "Testing API",
+                R.drawable.logo,
+                titles.contains("47")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                48,
+                "Testing REST",
+                R.drawable.logo,
+                titles.contains("48")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                49,
+                "Web Design",
+                R.drawable.logo,
+                titles.contains("49")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                50,
+                "Word Press",
+                R.drawable.logo,
+                titles.contains("50")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                51,
+                "Photoshop",
+                R.drawable.logo,
+                titles.contains("51")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                52,
+                "HTML",
+                R.drawable.logo,
+                titles.contains("52")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                53,
+                "HTML5",
+                R.drawable.logo,
+                titles.contains("53")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                54,
+                "Bootstrap",
+                R.drawable.logo,
+                titles.contains("54")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                55,
+                "Dreamweaver",
+                R.drawable.logo,
+                titles.contains("55")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                56,
+                "Web Development",
+                R.drawable.logo,
+                titles.contains("56")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                57,
+                "CSS Animations",
+                R.drawable.logo,
+                titles.contains("57")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                58,
+                "Graphic Design",
+                R.drawable.logo,
+                titles.contains("58")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                59,
+                "Drawing",
+                R.drawable.logo,
+                titles.contains("59")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                60,
+                "Digital Painting",
+                R.drawable.logo,
+                titles.contains("60")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                61,
+                "CorelDRAW",
+                R.drawable.logo,
+                titles.contains("61")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                62,
+                "Sketch Software",
+                R.drawable.logo,
+                titles.contains("62")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                63,
+                "Digital Art",
+                R.drawable.logo,
+                titles.contains("63")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                64,
+                "Illustration",
+                R.drawable.logo,
+                titles.contains("64")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                65,
+                "Digital Marketing",
+                R.drawable.logo,
+                titles.contains("65")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                66,
+                "Google Ads",
+                R.drawable.logo,
+                titles.contains("66")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                67,
+                "Social Media Marketing",
+                R.drawable.logo,
+                titles.contains("67")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                68,
+                "Google Analytics",
+                R.drawable.logo,
+                titles.contains("68")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                69,
+                "Email Marketing",
+                R.drawable.logo,
+                titles.contains("69")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                70,
+                "Facebook Ads",
+                R.drawable.logo,
+                titles.contains("70")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                71,
+                "Search Engine Optimization",
+                R.drawable.logo,
+                titles.contains("71")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                72,
+                "PPC",
+                R.drawable.logo,
+                titles.contains("72")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                73,
+                "Management",
+                R.drawable.logo,
+                titles.contains("73")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                74,
+                "TikTok Marketing",
+                R.drawable.logo,
+                titles.contains("74")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                75,
+                "Twitter Marketing",
+                R.drawable.logo,
+                titles.contains("75")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                76,
+                "Linux",
+                R.drawable.logo,
+                titles.contains("76")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                77,
+                "Windows Server",
+                R.drawable.logo,
+                titles.contains("77")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                78,
+                "Linux Administration",
+                R.drawable.logo,
+                titles.contains("78")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                79,
+                "Shell Scripting",
+                R.drawable.logo,
+                titles.contains("79")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                80,
+                "Active Directory",
+                R.drawable.logo,
+                titles.contains("80")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                81,
+                "PowerShell",
+                R.drawable.logo,
+                titles.contains("81")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                82,
+                "Command Line",
+                R.drawable.logo,
+                titles.contains("82")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                83,
+                "Ubuntu",
+                R.drawable.logo,
+                titles.contains("83")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                84,
+                "Virtualization",
+                R.drawable.logo,
+                titles.contains("84")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                85,
+                "Server Administration",
+                R.drawable.logo,
+                titles.contains("85")
+            )
+        )
+
+        datum.add(
+            ItemHome(
+                86,
+                "Computer Repair",
+                R.drawable.logo,
+                titles.contains("86")
+            )
+        )
 
         adapter.notifyDataSetChanged()
 
         val list : ArrayList<CategoryModel> = ArrayList()
-        list.add(CategoryModel("Information Security Certificate",datum))
+        val firstList : ArrayList<ItemHome> = ArrayList()
+        firstList.add(ItemHome(1,"Ethical Hacking",R.drawable.ethi,false))
+        firstList.add(ItemHome(2,"Cyber Security",R.drawable.cyber,false))
+        firstList.add(ItemHome(3,"Network Security",R.drawable.security,false))
+        firstList.add(ItemHome(4,"Penetration Testing",R.drawable.penetration,false))
+        firstList.add(ItemHome(5,"Digital Marketing",R.drawable.digital,false))
+        firstList.add(ItemHome(6,"Social Media Marketing",R.drawable.social,false))
+        firstList.add(ItemHome(7,"Android Development",R.drawable.android,false))
+        firstList.add(ItemHome(8,"Software Testing",R.drawable.software,false))
+        firstList.add(ItemHome(9,"SEO",R.drawable.seo,false))
+        firstList.add(ItemHome(10,"Web Development",R.drawable.web,false))
+        list.add(CategoryModel("Information Security Certificate",firstList))
 
         binding.header.layoutManager = LinearLayoutManager(activity!!)
 
@@ -395,7 +880,8 @@ class HomeFragment : Fragment(){
             val intent = Intent(Intent(context, Detail::class.java))
             intent.putExtra("type", pos.toString())
             intent.putExtra("id", (pos+3))
-            intent.putExtra("name", datum.get(pos).name)
+            intent.putExtra("price","1050")
+            intent.putExtra("GSON", Gson().toJson(datum[pos]))
             startActivity(intent)
 
         }

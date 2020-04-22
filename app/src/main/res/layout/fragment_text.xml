@@ -4,6 +4,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="match_parent"
+        android:overScrollMode="never"
         android:layout_height="match_parent"
         android:scrollbars="none">
 
@@ -12,6 +13,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:autoLink="web"
+            android:textSize="@dimen/dimen_15sp"
             android:textColor="@color/black"
             android:layout_margin="@dimen/fab_margin" />
 

@@ -5,6 +5,7 @@ interface Constants {
     companion object {
 
         const val ROOT_URL = "https://ssfvacancy.com/android/"
+        const val ROOT_URL2 = "https://xam.eduonline.space/android/"
         //const val ROOT_URL = "http://192.168.1.111:88/"
         const val IMAGE_URL = "http://ssfvacancy.com/android/data/"
         //private const val APP_URL = "http://192.168.1.111/Online-Exam/android/index.php/v1"
@@ -13,6 +14,7 @@ interface Constants {
         const val PROFILE_URL = "http://ssfvacancy.com/ssf-web/profile.php?from=app&s_id="
         //String APP_URL = "http://192.168.43.30/Hackplanet-Ads/index.php/v1";
         const val BASE_URL = "$APP_URL/"
+        const val HOME_URL = "${ROOT_URL2}index.php/v1/"
         const val APP_NAME = "STUDENT_ADMIN"
         const val INDIAN_RUPEE = "₹"
 

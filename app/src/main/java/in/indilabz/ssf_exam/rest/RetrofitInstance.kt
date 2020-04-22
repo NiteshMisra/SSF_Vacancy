@@ -122,6 +122,7 @@ class RetrofitInstance : Constants {
 
     companion object {
 
+        private var homeRetrofit: Retrofit? = null
         private var retrofit: Retrofit? = null
         private var client: OkHttpClient? = null
         private var call: Call<String>? = null
@@ -145,6 +146,35 @@ class RetrofitInstance : Constants {
                     .addConverterFactory(ScalarsConverterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
+
+            homeRetrofit = Retrofit.Builder()
+                .client(client!!)
+                .baseUrl(Constants.BASE_URL)
+                .addConverterFactory(ScalarsConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+
+            return retrofit as Retrofit
+        }
+
+        fun homeInstance(): Retrofit {
+
+            client = OkHttpClient.Builder()
+                .connectTimeout(10, TimeUnit.MINUTES)
+                .readTimeout(10, TimeUnit.MINUTES)
+                .writeTimeout(10, TimeUnit.MINUTES)
+                .addInterceptor { chain ->
+                    val newRequest = chain.request().newBuilder()
+                        .build()
+                    chain.proceed(newRequest)
+                }.build()
+
+            homeRetrofit = Retrofit.Builder()
+                .client(client!!)
+                .baseUrl(Constants.HOME_URL)
+                .addConverterFactory(ScalarsConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
 
             return retrofit as Retrofit
         }
@@ -176,7 +206,6 @@ class RetrofitInstance : Constants {
 
         fun getRetrofit(call: Call<String>?, retrofitListener: (Int, Boolean, String) -> Unit?) {
             RetrofitAPI(retrofitListener, call).execute()
-
         }
     }
 }
