@@ -40,9 +40,17 @@ class ShopAdapter(
 
         holder.title.text = shop.name
 
-        Glide.with(holder.preview.context)
-            .load(shop.image)
-            .into(holder.preview)
+        if(shop.image != R.drawable.logo){
+            holder.preview.scaleType = ImageView.ScaleType.FIT_XY
+            Glide.with(holder.preview.context)
+                .load(shop.image)
+                .into(holder.preview)
+        }else{
+            holder.preview.scaleType = ImageView.ScaleType.CENTER_INSIDE
+            Glide.with(holder.preview.context)
+                .load(shop.image)
+                .into(holder.preview)
+        }
 
         holder.bookNow.setOnClickListener{
             click.invoke(position)

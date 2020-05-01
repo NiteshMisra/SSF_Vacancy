@@ -99,7 +99,7 @@
                         android:layout_marginTop="25dp"
                         android:layout_marginEnd="25dp"
                         android:fontFamily="@font/poppins"
-                        android:text="Soft egg with fruits is made up of foods that are soft and easy to chew and swallow. These foods may be chopped, ground, mashed, pureed, and moist. You may need to follow this diet if you have had certaintypes of surgery, such as head, neck, or stomach"
+                        android:text="Please fill in the correct information which you want on your certificate. This certificate will be sent to your registered E mail Id. In case of any query, please mail us at info@hackplanet.in"
                         android:textSize="14sp" />
 
                 </androidx.core.widget.NestedScrollView>

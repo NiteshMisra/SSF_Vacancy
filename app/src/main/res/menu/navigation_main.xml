@@ -22,10 +22,6 @@
             android:icon="@drawable/ic_applied"
             android:title="Demo exam" />
         <item
-            android:id="@+id/nav_notification"
-            android:icon="@drawable/ic_notification"
-            android:title="Notification" />
-        <item
             android:id="@+id/nav_support"
             android:icon="@drawable/ic_info"
             android:title="Support" />

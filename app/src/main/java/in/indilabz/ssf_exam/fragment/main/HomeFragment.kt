@@ -4,10 +4,7 @@ import `in`.indilabz.review_application.rest.RetrofitInstance
 import `in`.indilabz.ssf_exam.INDIMaster
 import `in`.indilabz.ssf_exam.R
 import `in`.indilabz.ssf_exam.activity.Detail
-import `in`.indilabz.ssf_exam.activity.RegistrationActivity
-import `in`.indilabz.ssf_exam.activity.ViewAll
 import `in`.indilabz.ssf_exam.adapter.CategoryAdapter
-import `in`.indilabz.ssf_exam.adapter.CertificateAdapter
 import `in`.indilabz.ssf_exam.adapter.ShopAdapter
 import `in`.indilabz.ssf_exam.databinding.FragmentHomeBinding
 import `in`.indilabz.ssf_exam.model.CategoryModel
@@ -15,8 +12,6 @@ import `in`.indilabz.ssf_exam.model.Exam
 import `in`.indilabz.ssf_exam.model.ItemHome
 import `in`.indilabz.ssf_exam.model.Sport
 import `in`.indilabz.ssf_exam.rest.APIHelper
-import `in`.indilabz.ssf_exam.utils.Constants.Companion.EXAM_1
-import `in`.indilabz.ssf_exam.utils.Constants.Companion.EXAM_2
 import `in`.indilabz.ssf_exam.utils.Toaster
 import `in`.indilabz.yorneeds.utils.INDIPreferences
 import android.content.Intent
@@ -28,7 +23,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 
 class HomeFragment : Fragment(){
@@ -95,7 +89,7 @@ class HomeFragment : Fragment(){
             ItemHome(
                 11,
                 "Marketing Strategy",
-                R.drawable.logo,
+                R.drawable.marketing,
                 titles.contains("11")
             )
         )
@@ -104,7 +98,7 @@ class HomeFragment : Fragment(){
             ItemHome(
                 12,
                 "Website Traffic",
-                R.drawable.logo,
+                R.drawable.website_traffic,
                 titles.contains("12")
             )
         )
@@ -113,7 +107,7 @@ class HomeFragment : Fragment(){
             ItemHome(
                 13,
                 "Local SEO",
-                R.drawable.logo,
+                R.drawable.local_seo,
                 titles.contains("13")
             )
         )
@@ -122,7 +116,7 @@ class HomeFragment : Fragment(){
             ItemHome(
                 14,
                 "Facebook Marketing",
-                R.drawable.logo,
+                R.drawable.fb_mkt,
                 titles.contains("14")
             )
         )
@@ -131,7 +125,7 @@ class HomeFragment : Fragment(){
             ItemHome(
                 15,
                 "Instagram Marketing",
-                R.drawable.logo,
+                R.drawable.insta_mkt,
                 titles.contains("15")
             )
         )
@@ -140,16 +134,17 @@ class HomeFragment : Fragment(){
             ItemHome(
                 16,
                 "YouTube Marketing",
-                R.drawable.logo,
+                R.drawable.youtube_mkt,
                 titles.contains("16")
             )
         )
 
+
         datum.add(
             ItemHome(
                 17,
-                "Lead Generation",
-                R.drawable.logo,
+                "Web Development",
+                R.drawable.web_d,
                 titles.contains("17")
             )
         )
@@ -157,8 +152,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 18,
-                "Landing Page Optimization",
-                R.drawable.logo,
+                "Python",
+                R.drawable.python,
                 titles.contains("18")
             )
         )
@@ -166,8 +161,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 19,
-                "Development",
-                R.drawable.logo,
+                "JavaScript",
+                R.drawable.javascript,
                 titles.contains("19")
             )
         )
@@ -175,8 +170,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 20,
-                "Python",
-                R.drawable.logo,
+                "Java",
+                R.drawable.java,
                 titles.contains("20")
             )
         )
@@ -184,8 +179,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 21,
-                "Data Science",
-                R.drawable.logo,
+                "Word Press",
+                R.drawable.wordpress,
                 titles.contains("21")
             )
         )
@@ -193,8 +188,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 22,
-                "JavaScript",
-                R.drawable.logo,
+                "Photoshop",
+                R.drawable.photoshop,
                 titles.contains("22")
             )
         )
@@ -202,8 +197,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 23,
-                "Machine Learning",
-                R.drawable.logo,
+                "HTML",
+                R.drawable.html,
                 titles.contains("23")
             )
         )
@@ -211,8 +206,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 24,
-                "Java",
-                R.drawable.logo,
+                "HTML5",
+                R.drawable.html5,
                 titles.contains("24")
             )
         )
@@ -220,8 +215,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 25,
-                "PHP",
-                R.drawable.logo,
+                "Graphic Design",
+                R.drawable.graphic_design,
                 titles.contains("25")
             )
         )
@@ -229,8 +224,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 26,
-                "C#",
-                R.drawable.logo,
+                "CorelDRAW",
+                R.drawable.corel_draw,
                 titles.contains("26")
             )
         )
@@ -238,8 +233,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 27,
-                "Data Analysis",
-                R.drawable.logo,
+                "Google Ads",
+                R.drawable.google_ads,
                 titles.contains("27")
             )
         )
@@ -247,8 +242,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 28,
-                "Node.Js",
-                R.drawable.logo,
+                "TikTok Marketing",
+                R.drawable.tiktok,
                 titles.contains("28")
             )
         )
@@ -256,8 +251,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 29,
-                "CSS",
-                R.drawable.logo,
+                "Linux",
+                R.drawable.linux,
                 titles.contains("29")
             )
         )
@@ -265,8 +260,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 30,
-                "iOS Development",
-                R.drawable.logo,
+                "Windows Server",
+                R.drawable.window_server,
                 titles.contains("30")
             )
         )
@@ -274,8 +269,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 31,
-                "Deep Learning",
-                R.drawable.logo,
+                "Computer Repair",
+                R.drawable.computer_repair,
                 titles.contains("31")
             )
         )
@@ -283,8 +278,8 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 32,
-                "C++",
-                R.drawable.logo,
+                "Machine Learning",
+                R.drawable.ml,
                 titles.contains("32")
             )
         )
@@ -292,7 +287,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 33,
-                "Google Flutter",
+                "Lead Generation",
                 R.drawable.logo,
                 titles.contains("33")
             )
@@ -301,7 +296,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 34,
-                "Swift",
+                "Landing Page Optimization",
                 R.drawable.logo,
                 titles.contains("34")
             )
@@ -310,7 +305,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 35,
-                "React",
+                "Data Science",
                 R.drawable.logo,
                 titles.contains("35")
             )
@@ -319,7 +314,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 36,
-                "Native",
+                "PHP",
                 R.drawable.logo,
                 titles.contains("36")
             )
@@ -445,7 +440,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 50,
-                "Word Press",
+                "Google Flutter",
                 R.drawable.logo,
                 titles.contains("50")
             )
@@ -454,7 +449,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 51,
-                "Photoshop",
+                "Swift",
                 R.drawable.logo,
                 titles.contains("51")
             )
@@ -463,7 +458,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 52,
-                "HTML",
+                "React",
                 R.drawable.logo,
                 titles.contains("52")
             )
@@ -472,7 +467,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 53,
-                "HTML5",
+                "Native",
                 R.drawable.logo,
                 titles.contains("53")
             )
@@ -499,7 +494,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 56,
-                "Web Development",
+                "iOS Development",
                 R.drawable.logo,
                 titles.contains("56")
             )
@@ -508,7 +503,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 57,
-                "CSS Animations",
+                "Deep Learning",
                 R.drawable.logo,
                 titles.contains("57")
             )
@@ -517,7 +512,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 58,
-                "Graphic Design",
+                "C++",
                 R.drawable.logo,
                 titles.contains("58")
             )
@@ -544,7 +539,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 61,
-                "CorelDRAW",
+                "CSS Animations",
                 R.drawable.logo,
                 titles.contains("61")
             )
@@ -589,7 +584,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 66,
-                "Google Ads",
+                "CSS",
                 R.drawable.logo,
                 titles.contains("66")
             )
@@ -661,7 +656,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 74,
-                "TikTok Marketing",
+                "Twitter Marketing",
                 R.drawable.logo,
                 titles.contains("74")
             )
@@ -670,7 +665,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 75,
-                "Twitter Marketing",
+                "Linux Administration",
                 R.drawable.logo,
                 titles.contains("75")
             )
@@ -679,7 +674,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 76,
-                "Linux",
+                "Shell Scripting",
                 R.drawable.logo,
                 titles.contains("76")
             )
@@ -688,7 +683,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 77,
-                "Windows Server",
+                "Active Directory",
                 R.drawable.logo,
                 titles.contains("77")
             )
@@ -697,7 +692,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 78,
-                "Linux Administration",
+                "PowerShell",
                 R.drawable.logo,
                 titles.contains("78")
             )
@@ -706,7 +701,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 79,
-                "Shell Scripting",
+                "Command Line",
                 R.drawable.logo,
                 titles.contains("79")
             )
@@ -715,7 +710,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 80,
-                "Active Directory",
+                "Ubuntu",
                 R.drawable.logo,
                 titles.contains("80")
             )
@@ -724,7 +719,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 81,
-                "PowerShell",
+                "Virtualization",
                 R.drawable.logo,
                 titles.contains("81")
             )
@@ -733,7 +728,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 82,
-                "Command Line",
+                "Server Administration",
                 R.drawable.logo,
                 titles.contains("82")
             )
@@ -742,7 +737,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 83,
-                "Ubuntu",
+                "C#",
                 R.drawable.logo,
                 titles.contains("83")
             )
@@ -751,7 +746,7 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 84,
-                "Virtualization",
+                "Data Analysis",
                 R.drawable.logo,
                 titles.contains("84")
             )
@@ -760,18 +755,9 @@ class HomeFragment : Fragment(){
         datum.add(
             ItemHome(
                 85,
-                "Server Administration",
+                "Node.Js",
                 R.drawable.logo,
                 titles.contains("85")
-            )
-        )
-
-        datum.add(
-            ItemHome(
-                86,
-                "Computer Repair",
-                R.drawable.logo,
-                titles.contains("86")
             )
         )
 

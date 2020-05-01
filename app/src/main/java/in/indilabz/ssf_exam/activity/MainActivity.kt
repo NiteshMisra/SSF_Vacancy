@@ -52,7 +52,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.demoFragment,
                 R.id.appliedFragment,
                 R.id.registeredFragment,
-                R.id.notificationFragment,
                 R.id.tacFragment,
                 R.id.privacyFragment,
                 R.id.refundFragment),
@@ -79,7 +78,6 @@ class MainActivity : AppCompatActivity() {
                         R.id.nav_demo    -> (R.id.demoFragment)
                         R.id.nav_applied    -> (R.id.appliedFragment)
                         R.id.nav_registered    -> (R.id.registeredFragment)
-                        R.id.nav_notification    -> (R.id.notificationFragment)
                         R.id.nav_tac    -> (R.id.tacFragment)
                         R.id.nav_privacy   -> (R.id.privacyFragment)
                         R.id.nav_refund    -> (R.id.refundFragment)
@@ -123,7 +121,7 @@ class MainActivity : AppCompatActivity() {
 
         try{
             val intent = Intent(Intent.ACTION_DIAL);
-            intent.data = (Uri.parse("tel:+917505395950"));
+            intent.data = (Uri.parse("tel:+919953953395"));
             startActivity(intent)
         }
         catch (e : Exception){
@@ -137,7 +135,7 @@ class MainActivity : AppCompatActivity() {
        try {
            val  mail = Intent(Intent.ACTION_SEND);
            mail.setType("message/rfc822");
-           mail.putExtra(Intent.EXTRA_EMAIL  , arrayOf("info@ssfederation.com"));
+           mail.putExtra(Intent.EXTRA_EMAIL  , arrayOf("info@hackplanet.in"));
            startActivity(Intent.createChooser(mail, "Send mail..."));
        }
        catch (e : Exception){

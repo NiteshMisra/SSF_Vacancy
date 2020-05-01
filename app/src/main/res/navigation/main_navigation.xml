@@ -37,12 +37,6 @@
         tools:layout="@layout/fragment_demo"/>
 
     <fragment
-        android:id="@+id/notificationFragment"
-        android:name="in.indilabz.ssf_exam.fragment.main.NotificationFragment"
-        android:label="Notifications"
-        tools:layout="@layout/fragment_notification"/>
-
-    <fragment
         android:id="@+id/tacFragment"
         android:name="in.indilabz.ssf_exam.fragment.main.TACFragment"
         android:label="Terms &amp; Conditions"

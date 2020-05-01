@@ -30,7 +30,7 @@ class NotificationFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding. pdf.fromAsset("noti.pdf")
+        binding.pdf.fromAsset("noti.pdf")
             .enableAnnotationRendering(true)
             .spacing(10) // in dp
             .load()
